@@ -19,7 +19,8 @@ namespace AutoReportCreator {
     public partial class FrmMain : Form {
         public DAC dacInkismMIS = DacGet.dacInkismMIS;
         public DAC dacErpDB = DacGet.dacErpDB;
-        CMail mail = new CMail("192.168.2.111", "", "");
+        //211228 變更111 2 110 ,收件者
+        CMail mail = new CMail("192.168.2.110", "", "");
 
         public FrmMain() {
             InitializeComponent();
@@ -137,19 +138,17 @@ order by
         }
 
         private void btnStockForecastReport_Click(object sender, EventArgs e) {
-            var mail_receiver = new string[] {
-                "george@inkism.com.tw",         //董事長
-                "222001@inkism.com.tw",         //採購部
-                "danny.chen@inkism.com.tw",     //陳堯鑫
-                "jason.shen@inkism.com.tw",     //沈鉑淳
-                "225001@inkism.com.tw",         //儲運部
-                "amberlai@inkism.com.tw",       //賴俞汶
-                "mayzhou@inkism.com.tw",        //周美君
-                "tina.chen@inkism.com.tw",      //陳玟均
-                "flora.chiang@inkism.com.tw",   //江秀惠
+            var mail_receiver = new string[] {//211228 庫存報表 修改寄送人員
+                "george1@inkism.com.tw",         //董事長
+                "222001@inkism.com.tw",         //採購部                                
+                "225001@inkism.com.tw",         //儲運部                                
+                "tina.chen@inkism.com.tw",      //陳玟均                
                 "claire.cheng@inkism.com.tw",   //鄭鈺璉
-                "snwei@inkism.com.tw",          //黃勝威
-                "alex.yang@inkism.com.tw"       //楊志豪
+                "viola.yeh@inkism.com.tw",      //葉蕙菱 海外副總監
+                 "mandy.luo@inkism.com.tw",  //羅雅鈴   
+                 "alex.yang@inkism.com.tw",     //楊志豪
+                "ryan.lee.yf@inkism.com.tw",   // 李軏瀚
+                "orlando.chan@inkism.com.tw"          //詹元幟                
             };
 
 
@@ -250,21 +249,21 @@ order by
         }
 
         private void btnDailySaleReport_Click(object sender, EventArgs e)
-        {
+        {//211228 每日銷貨統計表 人員修改
             var mail_receiver = new string[] {
-                "george@inkism.com.tw",         //董事長
-                "alex.yang@inkism.com.tw",      //楊志豪
-                "weihan.chen@inkism.com.tw",    //陳維漢
-                "amberlai@inkism.com.tw",       //賴俞汶
-                "mayzhou@inkism.com.tw",        //周美君
-                "felix.kuo@inkism.com.tw",      //郭志傑
+                "george1@inkism.com.tw",         //董事長
+                "alex.yang@inkism.com.tw",      //楊志豪                                
+                "viola.yeh@inkism.com.tw",      //葉蕙菱 海外副總監
                 "claire.cheng@inkism.com.tw",   //鄭鈺璉
-                "snwei@inkism.com.tw"           //黃勝威
+                 "mandy.luo@inkism.com.tw",  //羅雅鈴   
+                "ryan.lee.yf@inkism.com.tw",   // 李軏瀚
+                "orlando.chan@inkism.com.tw"           //詹元幟
             };
 
-            //mail_receiver = new string[] {
-            //    "snwei@inkism.com.tw"           //黃勝威
-            //};
+            //          mail_receiver = new string[] {
+            //              "ryan.lee@inkism.com",   // 李軏瀚
+            //              "orlando.chan@inkism.com.tw"           //詹元幟
+            //          };
 
             if (!chkSendMail.Checked) mail_receiver = null;
             this.Enabled = false;
@@ -275,47 +274,56 @@ order by
 
         private void btnDailyStoreReport_Click(object sender, EventArgs e)
         {
-            //一芳
+            //一芳 211228 修正寄送人員
             var mail_receiver_yifang = new string[] {
-                "george@inkism.com.tw",         //董事長
-                "weihan.chen@inkism.com.tw",    //陳維漢
-                "felix.kuo@inkism.com.tw",      //郭志傑
-
+                "george1@inkism.com.tw",         //董事長
                 "yuanxin.liao@inkism.com.tw",   //廖源鑫
-                "david.chen@inkism.com.tw",     //陳弘衛
-                "jamie.pan@inkism.com.tw",      //潘徵萍
-                "steven@inkism.com.tw",         //李岳峰
-
-                "ryan.lee@inkism.com.tw",       //李軏瀚
-                "snwei@inkism.com.tw"
+                "kaymer.tong@inkism.com.tw",   //童培豪
+                 "david.chen@inkism.com.tw",     //陳弘衛
+                  "alex.yang@inkism.com.tw",  //楊志豪    		
+		        "mandy.luo@inkism.com.tw",  //羅雅鈴                                                
+                "ryan.lee.yf@inkism.com.tw",       //李軏瀚
+                "orlando.chan@inkism.com.tw"
             };
 
-            //霜江
+
+            //mail_receiver_yifang = new string[] {
+            //              "ryan.lee@inkism.com",   // 李軏瀚
+            //              "orlando.chan@inkism.com.tw"           //詹元幟
+            //          };
+
+            //霜江 211228 修正寄送人員
             var mail_receiver_shuangjiang = new string[] {
-                "george@inkism.com.tw",         //董事長
-                "weihan.chen@inkism.com.tw",    //陳維漢
-                "felix.kuo@inkism.com.tw",      //郭志傑
-
-                "stanley@inkism.com.tw",        //黃明順
-                "mia.shen@inkism.com.tw",       //沈郁欣
-
-                "ryan.lee@inkism.com.tw",       //李軏瀚
-                "snwei@inkism.com.tw"
+                "george1@inkism.com.tw",         //董事長
+                "stanley@inkism.com.tw",        //黃明順                 
+                 "alex.yang@inkism.com.tw",  //楊志豪    		
+		        "mandy.luo@inkism.com.tw",  //羅雅鈴 
+                "ryan.lee.yf@inkism.com.tw",       //李軏瀚
+                "orlando.chan@inkism.com.tw"
             };
 
-            //美濃
+            // mail_receiver_shuangjiang = new string[] {
+            //     "ryan.lee@inkism.com",   // 李軏瀚
+            //     "orlando.chan@inkism.com.tw"           //詹元幟
+            // };
+
+
+            //美濃211228 修正寄送人員
             var mail_receiver_mino = new string[] {
-                "george@inkism.com.tw",         //董事長
-                "weihan.chen@inkism.com.tw",    //陳維漢
-                "felix.kuo@inkism.com.tw",      //郭志傑
-
-                "taku0207@inkism.com.tw",       //李明耀
+                "george1@inkism.com.tw",         //董事長
+               "taku0207@inkism.com.tw",       //李明耀
                 "jennie.chiang@inkism.com.tw",  //蔣岷玹
-
-                "ryan.lee@inkism.com.tw",       //李軏瀚
-                "snwei@inkism.com.tw"
+                "alex.yang@inkism.com.tw",  //楊志豪    		
+		        "mandy.luo@inkism.com.tw",  //羅雅鈴                                 
+                "ryan.lee.yf@inkism.com.tw",       //李軏瀚
+                "orlando.chan@inkism.com.tw"
             };
-            
+
+         //   mail_receiver_mino = new string[] {
+         //                 "ryan.lee@inkism.com",   // 李軏瀚
+         //                 "orlando.chan@inkism.com.tw"           //詹元幟
+         //             };
+
             this.Enabled = false;
             var report = new DailyStoreReport(mail);
 

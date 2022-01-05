@@ -12,6 +12,23 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>c:\Users\orlando.chan\OneDrive - inkism.com.tw\文件\AGitLab\TestPush\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>//DESKTOP-S2U0NF2/Users/orlando.chan/OneDrive%2520-%2520inkism.com.tw/文件/AGitLab/TestPush/</InstallUrl>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,27 +49,39 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F8C9D7D0AB268A5E603DAAEE80A7A9B906FC25AC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AutoReportCreator_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper">
-      <HintPath>..\Library\Dapper.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\tmp2\Dll_Library\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\Library\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="NDesk.Options">
-      <HintPath>..\Library\NDesk.Options.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\tmp2\Dll_Library\NDesk.Options.dll</HintPath>
     </Reference>
     <Reference Include="SnweiCom.Data">
-      <HintPath>..\Library\SnweiCom.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\tmp2\Dll_Library\SnweiCom.Data.dll</HintPath>
     </Reference>
     <Reference Include="SnweiCom.IO">
-      <HintPath>..\Library\SnweiCom.IO.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\tmp2\Dll_Library\SnweiCom.IO.dll</HintPath>
     </Reference>
     <Reference Include="SnweiCom.Net">
-      <HintPath>..\Library\SnweiCom.Net.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\tmp2\Dll_Library\SnweiCom.Net.dll</HintPath>
     </Reference>
     <Reference Include="SnweiCom.Office">
-      <HintPath>..\Library\SnweiCom.Office.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\tmp2\Dll_Library\SnweiCom.Office.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -95,6 +124,7 @@
     <EmbeddedResource Include="ExcelTemplate\庫存採購預測報表.xlsx" />
     <EmbeddedResource Include="ExcelTemplate\每日銷貨統計表.xlsx" />
     <EmbeddedResource Include="ExcelTemplate\每日業績表.xlsx" />
+    <None Include="AutoReportCreator_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -143,6 +173,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MailTemplate\每日門市營業額.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 與 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
